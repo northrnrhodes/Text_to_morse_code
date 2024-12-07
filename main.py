@@ -26,6 +26,7 @@ while True:
     if text[0].isalpha():
         convert_morse(text)
 
+
     else:
         text = text.split(" ")
         print(text)
