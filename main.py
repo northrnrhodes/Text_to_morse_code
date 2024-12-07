@@ -10,14 +10,33 @@ morse_dict = {
 
 def convert_morse(text):
     morse_code = []
+
     for char in text.upper():
         if char in morse_dict:
              morse_code.append(morse_dict[char])
 
         else:
             morse_code.append("?")
-    return print(" w".join(morse_code))
+
+
+    return print(" ".join(morse_code))
 
 while True:
     text = input("What is your message? \n")
-    convert_morse(text)
+    if text[0].isalpha():
+        convert_morse(text)
+
+    else:
+        text = text.split(" ")
+        print(text)
+
+
+
+
+
+
+
+
+
+
+print(morse_dict.get_items())
